@@ -193,7 +193,7 @@ def color_ident(URL):
     for _ in text:
         for i in _:
             unwanted = i.find('i')
-            if unwanted != None:
+            if unwanted != None and i.find('p',class_='card-text-type-line').text.find('Land') == -1:
                 unwanted.extract()
             symbols.append(i.find_all('abbr'))
 
