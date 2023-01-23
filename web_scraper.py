@@ -262,7 +262,7 @@ def price(URL):
         if pholder == []:
             prices_clean.append(np.nan)
         else:
-            prices_clean.append(round(np.array(pholder).mean(), 2))
+            prices_clean.append(round(np.array(pholder).min(), 2))
 
     return np.array(prices_clean, dtype='object')
 
